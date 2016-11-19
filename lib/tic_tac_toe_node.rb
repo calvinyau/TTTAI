@@ -43,7 +43,7 @@ class TicTacToeNode
     all_children = []
     board.rows.each_with_index do |row, r_index|
       row.each_with_index do |tile, c_index|
-        if tile.empty?
+        if tile.nil?
           # possible problem
           child_board = board.dup
           pos = [r_index, c_index]
