@@ -9,6 +9,7 @@ class SuperComputerPlayer < ComputerPlayer
     current_node.children.each do |child_node|
       return child_node.prev_move_pos unless child_node.losing_node?(mark)
     end
+    raise "There must always be a non-losing node."
   end
 end
 
